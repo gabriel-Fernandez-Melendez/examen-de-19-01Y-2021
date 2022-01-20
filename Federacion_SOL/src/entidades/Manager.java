@@ -1,5 +1,7 @@
 package entidades;
 
+import java.util.Scanner;
+
 import utils.Datos;
 
 public class Manager {
@@ -52,5 +54,54 @@ public class Manager {
 	public DatosPersona getPersona() {
 		return this.persona;
 	}
+	
+	public static Manager nuevoManager() {
+		boolean val=true;
+		long id=0;
+		String telefono="";
+		String direccion="";
+		Manager ret=new Manager();
+		Scanner scan=new Scanner(System.in);
+		
+		do {
+		System.out.println("introduce el id del manager");
+		id=scan.nextLong();
+		if(id<1) {
+			System.out.println("su valor no es valido,introduzca un valor valido");
+			val=false;
+		}
+		else {
+			val=true;
+		}
+		}while(!val);
+		val=false;
+		do {
+			System.out.println("introduce el telefono del manager");
+			telefono=scan.nextLine();
+			if(telefono.length()<9) {
+				System.out.println("su valor no es valido,introduzca un valor valido");
+				val=false;
+			}
+			else {
+				val=true;
+			}
+			}while(!val);
+		val=false;
+		do {
+			System.out.println("introduce la direccion del manager");
+			direccion=scan.nextLine();
+			if(direccion.length()<29) {
+				System.out.println("su valor no es valido,introduzca un valor valido");
+				val=false;
+			}
+			else {
+				val=true;
+			}
+			}while(!val);
+		
+		return ret(id,telefono,direccion);
+		
+	}
+	
 
 }

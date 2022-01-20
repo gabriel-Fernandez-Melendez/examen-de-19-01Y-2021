@@ -13,6 +13,10 @@ public class DatosPersona {
 	private LocalDate fechaNac;
 
 	private Documentacion nifnie;
+	
+	public DatosPersona() {
+		super();
+	}
 
 	public DatosPersona(long id, String nombre, String telefono, LocalDate fechaNac) {
 		super();
