@@ -582,6 +582,10 @@ public class Principal4 {
 		
 		try {
 			File lee=new File("C:/Users/gabof/OneDrive/Escritorio");
+			
+			for(Manager a:Datos.MANAGERS){
+				
+			}
 		} 
 		catch (Exception e) {
 			e.printStackTrace();

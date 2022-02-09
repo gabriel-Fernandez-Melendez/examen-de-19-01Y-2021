@@ -117,6 +117,9 @@ public class Manager {
 	
 	//siguiente parte del ejercicio
 	public void exportar() {
+		for(Manager a:Datos.MANAGERS) {
+			a.persona.getFechaNac();
+		}
 		
 	}
 
